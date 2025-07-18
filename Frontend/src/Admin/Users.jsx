@@ -22,11 +22,7 @@ const Users = () => {
   };
 
    useEffect(() => {
-<<<<<<< HEAD
-    axios.get(`/api/users`)
-=======
-    axios.get(`http://localhost:4000/users`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+     axios.get(`/api/users`)
       .then((response) => {
         setUsers(response.data);
         // setLoading(false);
@@ -38,20 +34,12 @@ const Users = () => {
 }, []);
 
 const deleteData = (taskId) => {
-<<<<<<< HEAD
     axios.delete(`/api/userdelete/${taskId}`);
-=======
-    axios.delete(`http://localhost:4000/userdelete/${taskId}`);
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
     window.location.assign('/users');
     alert('User is deleted');
   };
   const deleteorder = (taskId) => {
-<<<<<<< HEAD
     axios.delete(`/api/userorderdelete/${taskId}`);
-=======
-    axios.delete(`http://localhost:4000/userorderdelete/${taskId}`);
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
     window.location.assign('/users');
     alert('deleted');
   };
@@ -62,11 +50,7 @@ const deleteData = (taskId) => {
   
   const fetchUserBikeData = (userId) => {
    
-<<<<<<< HEAD
     axios.get(`/api/getorders/${userId}`)
-=======
-    axios.get(`http://localhost:4000/getorders/${userId}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
 
     .then((response) => {
       setUserbookings(response.data);
@@ -148,11 +132,7 @@ const deleteData = (taskId) => {
                               >
                                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                                   <div>
-<<<<<<< HEAD
                                     <img src={`/api/${item?.itemImage}`} alt={`${item.itemtype} Image`} style={{ height: "80px" }} />
-=======
-                                    <img src={`http://localhost:4000/${item?.itemImage}`} alt={`${item.itemtype} Image`} style={{ height: "80px" }} />
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
                                   </div>
                                   <div>
                                     <p>Product Name:</p>

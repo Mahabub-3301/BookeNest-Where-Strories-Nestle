@@ -43,11 +43,7 @@ const handleSubmit = async (e) => {
        formDataToSend.append('userName', user.name);
        formDataToSend.append('userId', user.id);
 
-<<<<<<< HEAD
-      await axios.post('/api/items', formDataToSend);
-=======
-      await axios.post('http://localhost:4000/items', formDataToSend);
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+       await axios.post('/api/items', formDataToSend);
       alert('Book added successfully');
       navigate('/myproducts')
     } catch (error) {

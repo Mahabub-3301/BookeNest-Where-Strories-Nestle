@@ -11,11 +11,7 @@ function Products() {
   useEffect(() => {
     // Fetch all items
     axios
-<<<<<<< HEAD
-      .get(`/api/item`)
-=======
-      .get(`http://localhost:4000/item`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+       .get(`/api/item`)
       .then((response) => {
         const taskData = response.data;
         setItems(taskData);
@@ -27,11 +23,7 @@ function Products() {
     // Fetch wishlist items
     const user = JSON.parse(localStorage.getItem('user'));
     if(user){
-<<<<<<< HEAD
-    axios.get(`/api/wishlist/${user.id}`)
-=======
-    axios.get(`http://localhost:4000/wishlist/${user.id}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+     axios.get(`/api/wishlist/${user.id}`)
     .then((response) => {
       const wishlistData = response.data;
       setWishlist(wishlistData);
@@ -68,19 +60,11 @@ function Products() {
       console.log('itemId2:', title);
   
       // Add item to the wishlist
-<<<<<<< HEAD
       await axios.post(`/api/wishlist/add`, { itemId: itemId2, title, itemImage,userId,userName });
       // Refresh the wishlist items
       const user = JSON.parse(localStorage.getItem('user'));
       if(user){
       axios.get(`/api/wishlist/${user.id}`)
-=======
-      await axios.post(`http://localhost:4000/wishlist/add`, { itemId: itemId2, title, itemImage,userId,userName });
-      // Refresh the wishlist items
-      const user = JSON.parse(localStorage.getItem('user'));
-      if(user){
-      axios.get(`http://localhost:4000/wishlist/${user.id}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
       .then((response) => {
         const wishlistData = response.data;
         setWishlist(wishlistData);
@@ -98,20 +82,12 @@ function Products() {
   const removeFromWishlist = async (itemId) => {
     try {
       // Remove item from the wishlist
-<<<<<<< HEAD
       await axios.post(`/api/wishlist/remove`, { itemId }); // Adjust the endpoint accordingly
-=======
-      await axios.post(`http://localhost:4000/wishlist/remove`, { itemId }); // Adjust the endpoint accordingly
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
 
       // Refresh the wishlist items
       const user = JSON.parse(localStorage.getItem('user'));
       if(user){
-<<<<<<< HEAD
       const response = await axios.get(`/api/wishlist/${user.id}`,); // Adjust the endpoint accordingly
-=======
-      const response = await axios.get(`http://localhost:4000/wishlist/${user.id}`,); // Adjust the endpoint accordingly
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
       setWishlist(response.data);
     } 
     else{
@@ -135,11 +111,7 @@ function Products() {
           {items.map((item) => (
             <div key={item._id} className="bg-white p-4 rounded shadow">
               <img
-<<<<<<< HEAD
                 src={`/${item.itemImage}`}
-=======
-                src={`http://localhost:4000/${item.itemImage}`}
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
                 alt="Item Image"
                 className="rounded-t-lg"
                 style={{ height: '350px', width: '500px' }}

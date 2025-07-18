@@ -10,11 +10,7 @@ function Myproducts() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       axios
-<<<<<<< HEAD
-        .get(`/api/getitem/${user.id}`)
-=======
-        .get(`http://localhost:4000/getitem/${user.id}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+         .get(`/api/getitem/${user.id}`)
         .then((response) => {
           console.log('Response data:', response.data); // Log the response data
           const taskData = response.data;
@@ -29,11 +25,7 @@ function Myproducts() {
   }, []);
 
   const deleteItem=((Id)=>{
-<<<<<<< HEAD
     axios.delete(`/api/itemdelete/${Id}`);
-=======
-    axios.delete(`http://localhost:4000/itemdelete/${Id}`);
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
     window.location.assign('/myproducts');
     alert('Item is deleted');
   })
@@ -54,11 +46,7 @@ function Myproducts() {
               </button>
                 </div>
             <img
-<<<<<<< HEAD
               src={`/api/${item.itemImage}`}
-=======
-              src={`http://localhost:4000/${item.itemImage}`}
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
               alt="Item Image"
               className="rounded-t-lg" style={{height:"350px",width:"500px"}}
               // className="w-full h-50 object-cover mb-4 rounded"

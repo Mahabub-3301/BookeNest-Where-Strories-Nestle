@@ -18,11 +18,7 @@ const Seller = () => {
   // const [showDetail, setShowDetail] = useState(false);
 
    useEffect(() => {
-<<<<<<< HEAD
-    axios.get(`/api/sellers`)
-=======
-    axios.get(`http://localhost:4000/sellers`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+     axios.get(`/api/sellers`)
       .then((response) => {
         setUsers(response.data);
         // setLoading(false);
@@ -34,20 +30,12 @@ const Seller = () => {
 }, []);
 
 const deleteData = (taskId) => {
-<<<<<<< HEAD
     axios.delete(`/api/sellerdelete/${taskId}`);
-=======
-    axios.delete(`http://localhost:4000/sellerdelete/${taskId}`);
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
     window.location.assign('/sellers');
     alert('User is deleted');
   };
   const deleteitem = (taskId) => {
-<<<<<<< HEAD
     axios.delete(`/api/useritemdelete/${taskId}`);
-=======
-    axios.delete(`http://localhost:4000/useritemdelete/${taskId}`);
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
     window.location.assign('/users');
     alert('deleted');
   };
@@ -58,11 +46,7 @@ const deleteData = (taskId) => {
   
   const fetchUserBikeData = (userId) => {
    
-<<<<<<< HEAD
     axios.get(`/api/getitem/${userId}`)
-=======
-    axios.get(`http://localhost:4000/getitem/${userId}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
 
     .then((response) => {
       setUserbookings(response.data);
@@ -144,11 +128,7 @@ const deleteData = (taskId) => {
                               >
                                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                                   <div>
-<<<<<<< HEAD
                                     <img src={`/api/${item?.itemImage}`} alt={`${item.itemtype} Image`} style={{ height: "80px",width:"120px" }} /> <br/>
-=======
-                                    <img src={`http://localhost:4000/${item?.itemImage}`} alt={`${item.itemtype} Image`} style={{ height: "80px",width:"120px" }} /> <br/>
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
                                   </div>
                                   <div>
                                     <p>Product Name:</p>

@@ -12,11 +12,7 @@ const Book = () => {
   const { id } = useParams();
 
   useEffect(() => {
-<<<<<<< HEAD
-    axios.get(`/api/item/${id}`)
-=======
-    axios.get(`http://localhost:4000/item/${id}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
+     axios.get(`/api/item/${id}`)
       .then((resp) => {
         console.log(resp);
         setItem(resp.data); // Set item to the fetched data (an object, not an array)
@@ -33,11 +29,7 @@ const Book = () => {
       {item && (
         <div>
             <div style={{display:"flex",justifyContent:"center",height:"450px"}} >
-<<<<<<< HEAD
             <img src={`/api/${item?.itemImage}`} alt={`${item.itemtype} Image`}  />
-=======
-            <img src={`http://localhost:4000/${item?.itemImage}`} alt={`${item.itemtype} Image`}  />
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
                 </div>
                 <h1 className='text-center'> {item.itemtype}-{item._id.slice(3,7)}</h1>
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>

@@ -18,12 +18,8 @@ function Orders() {
     const user = JSON.parse(localStorage.getItem('user'));
     console.log(user)
     if (user) {
-<<<<<<< HEAD
-      axios.get(`/api/getsellerorders/${user.id}`)
-=======
-      axios.get(`http://localhost:4000/getsellerorders/${user.id}`)
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
-  .then((response) => {
+       axios.get(`/api/getsellerorders/${user.id}`)
+           .then((response) => {
     setOrders(response.data);
   })
   .catch((error) => {
@@ -75,11 +71,7 @@ function Orders() {
               >
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                   <div>
-<<<<<<< HEAD
                     <img src={`/api/${item?.itemImage}`} alt={`${item.itemtype} Image`} style={{ height: "80px" }} />
-=======
-                    <img src={`http://localhost:4000/${item?.itemImage}`} alt={`${item.itemtype} Image`} style={{ height: "80px" }} />
->>>>>>> 39fbaa7585773ecaa8f582a7eed31f9caad35d0e
                   </div>
                   <div>
                     <p>ProductName:</p>
